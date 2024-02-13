@@ -1,4 +1,4 @@
-# deesynertz/laravel-clean
+# deesynertz/Laravel-location
 
 ## Features
 
