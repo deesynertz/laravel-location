@@ -1,0 +1,43 @@
+{
+    "name": "deesynertz/laravel-location",
+    "description": "laravel-location",
+    "keywords": [
+        "location", "locate", "laravel", "php", "laravel-location"
+    ],
+    "homepage": "https://github.com/deesynertz/laravel-location",
+    "type": "library",
+    "license": "MIT",
+    "authors":[
+        {
+            "name":"Deogratias Alison",
+            "email":"deesynertz@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Deesynertz\\Location\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Deesynertz\\Location\\LocateServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish --tag=deesynertz-locate-migrations --force",
+            "@php artisan vendor:publish --tag=deesynertz-locate-config --force"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/support": ">=5.2.7",
+        "illuminate/session": ">=5.2.7"
+    }
+}
